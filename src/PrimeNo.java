@@ -25,11 +25,28 @@ public class PrimeNo {
 	                        int num6 = s.nextInt();
 	                        int num2 = num * num6;
 	                        System.out.println("product is"+num2); 
+	                        boolean flag = false;
+	                        for (int i = 2; i <= num2 / 2; ++i) {
+	                          if (num2 % i == 0) {
+	                            flag = true;
+	                            break;
+	                          }
+	                        }
+
 	                        float num3= num2;
-	                        System.out.println("Input the no to be divided"); 
-	                        int num4 = s.nextInt();
-	                        float num5 = num4;
-	                        System.out.println("The final output is"+num3/num5); 
+	                        if(!flag)
+	                        {
+		                        System.out.println("Input the no to be divided"); 
+		                        int num4 = s.nextInt();
+		                        float num5 = num4;
+		                        System.out.println("The final output is"+num3/num5); 
+
+
+	                        }
+	                        else
+	                        {
+	                        System.out.println("It is not prime number"); 
+	                        }
 
 	              
 	 } 
